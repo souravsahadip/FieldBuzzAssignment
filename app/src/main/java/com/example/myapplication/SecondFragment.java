@@ -31,7 +31,7 @@ public class SecondFragment extends Fragment {
 
     String url_test= "https://recruitment.fisdev.com/api/v0/recruiting-entities/";
     TextView textView_token;
-    String auth_token;
+    String auth_token="";
     JSONObject applicant_info = new JSONObject();
 
     @Override
@@ -45,8 +45,9 @@ public class SecondFragment extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        if(getArguments().getString("auth_token")!=null)
         auth_token= getArguments().getString("auth_token");
-        textView_token=(TextView)view.findViewById(R.id.textView_token);
+        textView_token=view.findViewById(R.id.textView_token);
         textView_token.setText(auth_token);
         validateForm();
 
@@ -61,6 +62,47 @@ public class SecondFragment extends Fragment {
     }
 
     boolean api__post_info(){
+        AsyncHttpClient client = new AsyncHttpClient();
+        try {
+            StringEntity entity = new StringEntity(applicant_info.toString());
+            Header[] headers= new Header[1];
+            String token="Token "+ auth_token;
+            headers[0]=new BasicHeader("Authorization", token);
+
+            client.post(getContext(),url_test, headers,entity, "application/json",
+                    new JsonHttpResponseHandler() {
+
+                        @Override
+                        public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+
+                            Log.d("response", String.valueOf(response));
+                            try {
+                                String message= (String) response.get("message");
+                                textView_token.setText(message);
+//                                Bundle bundle = new Bundle();
+//                                bundle.putString("auth_token", auth_token);
+//                                NavHostFragment.findNavController(FirstFragment.this)
+//                                        .navigate(R.id.action_FirstFragment_to_SecondFragment, bundle);
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+
+                        }
+
+                        @Override
+                        public void onFailure(int statusCode, Header[] headers, String res, Throwable t) {
+                            // called when response HTTP status is "4XX" (eg. 401, 403, 404)
+                        }
+                    });
+
+
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return true;
+    }
+
+    boolean api_submit_file(){
         AsyncHttpClient client = new AsyncHttpClient();
         try {
             StringEntity entity = new StringEntity(applicant_info.toString());
