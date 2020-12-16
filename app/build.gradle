@@ -39,5 +39,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     compile 'com.loopj.android:android-async-http:1.4.9'
+    compile 'pub.devrel:easypermissions:0.2.0'
+    implementation 'commons-io:commons-io:2.5'
 
 }
