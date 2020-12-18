@@ -1,3 +1,5 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="inputWidth">270dp</dimen>
+    <dimen name="inputHeight">35dp</dimen>
 </resources>
