@@ -18,15 +18,15 @@
             android:orientation="vertical">
 
 
-
             <TextView
                 android:id="@+id/textView_token"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="136dp"
-                android:layout_marginLeft="136dp"
-                android:layout_marginTop="36dp"
+                android:layout_marginStart="88dp"
+                android:layout_marginLeft="88dp"
+                android:layout_marginTop="32dp"
                 android:text="@string/applicantInformation"
+                android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -36,16 +36,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Choose"
-                app:layout_constraintStart_toStartOf="@+id/textView14"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
+                app:layout_constraintStart_toStartOf="@+id/textAttachCV"
+                app:layout_constraintTop_toBottomOf="@+id/textAttachCV" />
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/textName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginLeft="32dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="24dp"
                 android:text="@string/name"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView_token" />
@@ -53,32 +53,38 @@
             <EditText
                 android:id="@+id/fieldName"
                 android:layout_width="@dimen/inputWidth"
-                android:layout_height="@dimen/inputHeight"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ems="10"
                 android:inputType="text"
-                app:layout_constraintStart_toStartOf="@+id/textView"
-                app:layout_constraintTop_toBottomOf="@+id/textView" />
+                app:layout_constraintStart_toStartOf="@+id/textName"
+                app:layout_constraintTop_toBottomOf="@+id/textName" />
 
             <EditText
                 android:id="@+id/fieldEmail"
                 android:layout_width="@dimen/inputWidth"
-                android:layout_height="@dimen/inputHeight"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ems="10"
                 android:gravity="start|top"
                 android:inputType="textMultiLine"
-                app:layout_constraintStart_toStartOf="@+id/textView2"
-                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+                app:layout_constraintStart_toStartOf="@+id/textEmail"
+                app:layout_constraintTop_toBottomOf="@+id/textEmail" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/textEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="@string/email"
                 app:layout_constraintStart_toStartOf="@+id/fieldName"
                 app:layout_constraintTop_toBottomOf="@+id/fieldName" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/textPhone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="@string/phone"
                 app:layout_constraintStart_toStartOf="@+id/fieldEmail"
                 app:layout_constraintTop_toBottomOf="@+id/fieldEmail" />
@@ -87,15 +93,18 @@
                 android:id="@+id/fieldPhone"
                 android:layout_width="@dimen/inputWidth"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ems="10"
                 android:gravity="start|top"
                 android:inputType="textMultiLine"
-                app:layout_constraintStart_toStartOf="@+id/textView3"
-                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+                app:layout_constraintStart_toStartOf="@+id/textPhone"
+                app:layout_constraintTop_toBottomOf="@+id/textPhone" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/textAddress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="@string/full_address"
                 app:layout_constraintStart_toStartOf="@+id/fieldPhone"
                 app:layout_constraintTop_toBottomOf="@+id/fieldPhone" />
@@ -104,16 +113,18 @@
                 android:id="@+id/fieldFullAddress"
                 android:layout_width="@dimen/inputWidth"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ems="10"
                 android:gravity="start|top"
                 android:inputType="textMultiLine"
-                app:layout_constraintStart_toStartOf="@+id/textView4"
-                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+                app:layout_constraintStart_toStartOf="@+id/textAddress"
+                app:layout_constraintTop_toBottomOf="@+id/textAddress" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/textUniversity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="8dp"
                 android:text="@string/name_of_university"
                 app:layout_constraintStart_toStartOf="@+id/fieldFullAddress"
                 app:layout_constraintTop_toBottomOf="@+id/fieldFullAddress" />
@@ -126,22 +137,24 @@
                 android:ems="10"
                 android:gravity="start|top"
                 android:inputType="textMultiLine"
-                app:layout_constraintStart_toStartOf="@+id/textView5"
-                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+                app:layout_constraintStart_toStartOf="@+id/textUniversity"
+                app:layout_constraintTop_toBottomOf="@+id/textUniversity" />
 
             <TextView
                 android:id="@+id/textGradYear"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="@string/graduation_year"
                 app:layout_constraintStart_toStartOf="@+id/fieldUniversity"
                 app:layout_constraintTop_toBottomOf="@+id/fieldUniversity" />
 
 
             <TextView
-                android:id="@+id/textView7"
+                android:id="@+id/textCgpa"
                 android:layout_width="@dimen/inputWidth"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="@string/cgpa"
                 app:layout_constraintStart_toStartOf="@+id/fieldGraduation"
                 app:layout_constraintTop_toBottomOf="@+id/fieldGraduation" />
@@ -150,15 +163,18 @@
                 android:id="@+id/fieldCgpa"
                 android:layout_width="@dimen/inputWidth"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ems="10"
                 android:gravity="start|top"
                 android:inputType="textMultiLine"
-                app:layout_constraintStart_toStartOf="@+id/textView7"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+                app:layout_constraintStart_toStartOf="@+id/textCgpa"
+                app:layout_constraintTop_toBottomOf="@+id/textCgpa" />
 
             <TextView
-                android:id="@+id/textView8"
+                android:id="@+id/textExp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="@string/experience_in_month"
                 app:layout_constraintStart_toStartOf="@+id/fieldCgpa"
                 app:layout_constraintTop_toBottomOf="@+id/fieldCgpa" />
@@ -167,15 +183,18 @@
                 android:id="@+id/fieldExperience"
                 android:layout_width="@dimen/inputWidth"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ems="10"
                 android:gravity="start|top"
-                android:inputType="textMultiLine"
-                app:layout_constraintStart_toStartOf="@+id/textView8"
-                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+                android:inputType="number"
+                app:layout_constraintStart_toStartOf="@+id/textExp"
+                app:layout_constraintTop_toBottomOf="@+id/textExp" />
 
             <TextView
-                android:id="@+id/textView9"
+                android:id="@+id/textWorkplace"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="@string/current_work_place_name"
                 app:layout_constraintStart_toStartOf="@+id/fieldExperience"
                 app:layout_constraintTop_toBottomOf="@+id/fieldExperience" />
@@ -184,31 +203,36 @@
                 android:id="@+id/fieldCurrentWorkplace"
                 android:layout_width="@dimen/inputWidth"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ems="10"
                 android:gravity="start|top"
                 android:inputType="textMultiLine"
-                app:layout_constraintStart_toStartOf="@+id/textView9"
-                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+                app:layout_constraintStart_toStartOf="@+id/textWorkplace"
+                app:layout_constraintTop_toBottomOf="@+id/textWorkplace" />
 
             <TextView
                 android:id="@+id/textApplying"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="@string/applying_in"
                 app:layout_constraintStart_toStartOf="@+id/fieldCurrentWorkplace"
                 app:layout_constraintTop_toBottomOf="@+id/fieldCurrentWorkplace" />
 
             <TextView
-                android:id="@+id/textView11"
+                android:id="@+id/textSalary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="@string/expected_salary"
                 app:layout_constraintStart_toStartOf="@+id/fieldApplying"
                 app:layout_constraintTop_toBottomOf="@+id/fieldApplying" />
 
             <TextView
-                android:id="@+id/textView12"
+                android:id="@+id/textRef"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="@string/field_buzz_reference"
                 app:layout_constraintStart_toStartOf="@+id/fieldSalary"
                 app:layout_constraintTop_toBottomOf="@+id/fieldSalary" />
@@ -217,6 +241,7 @@
                 android:id="@+id/textGithub"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="@string/github_project_url"
                 app:layout_constraintStart_toStartOf="@+id/fieldReference"
                 app:layout_constraintTop_toBottomOf="@+id/fieldReference" />
@@ -225,6 +250,7 @@
                 android:id="@+id/fieldApplying"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:orientation="horizontal"
                 app:layout_constraintStart_toStartOf="@+id/textApplying"
                 app:layout_constraintTop_toBottomOf="@+id/textApplying">
@@ -234,7 +260,7 @@
                     android:layout_width="141dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:checked="false"
+                    android:checked="true"
                     android:text="Mobile" />
 
                 <RadioButton
@@ -248,27 +274,30 @@
             <EditText
                 android:id="@+id/fieldSalary"
                 android:layout_width="@dimen/inputWidth"
-                android:layout_height="@dimen/inputHeight"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:ems="10"
                 android:gravity="start|top"
-                android:inputType="textMultiLine"
-                app:layout_constraintStart_toStartOf="@+id/textView11"
-                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+                android:inputType="number"
+                app:layout_constraintStart_toStartOf="@+id/textSalary"
+                app:layout_constraintTop_toBottomOf="@+id/textSalary" />
 
             <EditText
                 android:id="@+id/fieldReference"
                 android:layout_width="@dimen/inputWidth"
-                android:layout_height="@dimen/inputHeight"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:ems="10"
                 android:gravity="start|top"
                 android:inputType="textMultiLine"
-                app:layout_constraintStart_toStartOf="@+id/textView12"
-                app:layout_constraintTop_toBottomOf="@+id/textView12" />
+                app:layout_constraintStart_toStartOf="@+id/textRef"
+                app:layout_constraintTop_toBottomOf="@+id/textRef" />
 
             <EditText
                 android:id="@+id/fieldGithub"
                 android:layout_width="@dimen/inputWidth"
-                android:layout_height="@dimen/inputHeight"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:ems="10"
                 android:gravity="start|top"
                 android:inputType="textMultiLine"
@@ -276,7 +305,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textGithub" />
 
             <TextView
-                android:id="@+id/textView14"
+                android:id="@+id/textAttachCV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -290,18 +319,43 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="156dp"
                 android:layout_marginLeft="156dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="64dp"
                 android:text="Submit"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button_chooseFile" />
 
             <EditText
                 android:id="@+id/fieldGraduation"
                 android:layout_width="@dimen/inputWidth"
-                android:layout_height="@dimen/inputHeight"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ems="10"
                 android:inputType="number"
                 app:layout_constraintStart_toStartOf="@+id/textGradYear"
                 app:layout_constraintTop_toBottomOf="@+id/textGradYear" />
+
+            <TextView
+                android:id="@+id/textChosenfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/no_file_chosen"
+                app:layout_constraintStart_toEndOf="@+id/button_chooseFile"
+                app:layout_constraintTop_toTopOf="@+id/button_chooseFile" />
+
+            <TextView
+                android:id="@+id/textHttperror"
+                android:layout_width="164dp"
+                android:layout_height="31dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_submit" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

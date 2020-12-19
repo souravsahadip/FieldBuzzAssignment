@@ -7,13 +7,14 @@
     tools:context=".FirstFragment">
 
     <TextView
-        android:id="@+id/textview_first"
+        android:id="@+id/textHello"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="32dp"
         android:text="@string/hello_first_fragment"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -21,38 +22,49 @@
         android:id="@+id/buttonLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="32dp"
         android:text="LOGIN"
-        app:layout_constraintStart_toStartOf="@+id/idPassword"
-        app:layout_constraintTop_toBottomOf="@+id/idPassword" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fieldPassword" />
 
     <EditText
-        android:id="@+id/idUsername"
-        android:layout_width="156dp"
-        android:layout_height="29dp"
-        android:layout_marginTop="48dp"
-        android:inputType="text"
-        app:layout_constraintStart_toStartOf="@+id/textview_first"
-        app:layout_constraintTop_toBottomOf="@+id/textview_first" />
-
-    <EditText
-        android:id="@+id/idPassword"
-        android:layout_width="wrap_content"
+        android:id="@+id/fieldUsername"
+        android:layout_width="@dimen/inputWidth"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/textUsername"
+        app:layout_constraintTop_toBottomOf="@+id/textUsername" />
+
+    <EditText
+        android:id="@+id/fieldPassword"
+        android:layout_width="@dimen/inputWidth"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="password"
         android:inputType="textPassword"
-        app:layout_constraintStart_toStartOf="@+id/idUsername"
-        app:layout_constraintTop_toBottomOf="@+id/idUsername" />
+        app:layout_constraintStart_toStartOf="@+id/textPassword"
+        app:layout_constraintTop_toBottomOf="@+id/textPassword" />
 
     <TextView
-        android:id="@+id/idTextResponse"
+        android:id="@+id/textUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
-        android:ems="10"
-        android:text="Name"
-        app:layout_constraintStart_toStartOf="@+id/buttonLogin"
-        app:layout_constraintTop_toBottomOf="@+id/buttonLogin" />
+        android:layout_marginTop="32dp"
+        android:text="@string/username"
+        app:layout_constraintStart_toStartOf="@+id/textHello"
+        app:layout_constraintTop_toBottomOf="@+id/textHello" />
+
+    <TextView
+        android:id="@+id/textPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/password"
+        app:layout_constraintStart_toStartOf="@+id/fieldUsername"
+        app:layout_constraintTop_toBottomOf="@+id/fieldUsername" />
 </androidx.constraintlayout.widget.ConstraintLayout>

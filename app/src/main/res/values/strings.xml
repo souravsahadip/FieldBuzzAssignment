@@ -4,10 +4,14 @@
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
+    <string name="third_fragment_label">Third Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="username">Username:</string>
+    <string name="password">Password:</string>
+
+    <string name="hello_first_fragment">Fieldbuzz Application</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="applicantInformation">Applicant Information</string>
     <string name="name">Name*</string>
@@ -21,8 +25,12 @@
     <string name="current_work_place_name">Current work place name (optional)</string>
     <string name="applying_in">Applying in*</string>
     <string name="expected_salary">expected_salary*</string>
-    <string name="field_buzz_reference">field_buzz_reference</string>
+    <string name="field_buzz_reference">field_buzz_reference(Optional)</string>
     <string name="github_project_url">github_project_url*</string>
     <string name="cv_file">Attch CV File (Must be PDF format)</string>
+    <string name="no_file_chosen">No file chosen</string>
+
+    <string name="server_response">Server Response:</string>
+    <string name="empty">nothing</string>
 
 </resources>
